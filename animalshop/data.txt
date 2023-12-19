@@ -1,0 +1,58 @@
+create database shopping
+default CHARACTER SET utf8mb4 DEFAULT COLLATE utf8mb4_unicode_ci;
+
+create table member(
+  mem_no int not null primary key,
+  mem_id varchar(10) not null,
+  mem_pw varchar(20) not null,
+  mem_name varchar(20) not null,
+  mem_gender char(1) not null,
+  mem_phone varchar(11) not null,
+  mem_email varchar(50) not null,
+  mem_address varchar(50) not null);
+
+ create table orders (
+ order_no int AUTO_INCREMENT not null primary key,
+ mem_no int not null,
+ order_name varchar(20) not null,
+ order_phone varchar(11) not null,
+ order_email varchar(50) not null,
+ order_adress varchar(50) not null,
+ order_date date null,
+ order_payamount decimal null,
+ order_statement int not null,
+ foreign key (mem_no) references member(mem_no)
+ );
+
+create table cart (
+ cart_no int AUTO_INCREMENT not null primary key,
+ mem_no int not null,
+ cart_amount decimal not null,
+ foreign key (mem_no) references member(mem_no)
+ );
+      
+create table product (
+ product_no int AUTO_INCREMENT not null primary key,
+ product_name varchar(40) not null,
+ product_description text null,
+ product_price decimal null,
+ product_qty decimal not null
+ );
+      
+create table cart_product (
+ cart_no int not null ,
+ product_no int not null,
+ cart_qty int null,
+ cart_product_amount decimal null,
+ foreign key (product_no) references product(product_no),
+ foreign key (cart_no) references cart(cart_no)
+ );
+      
+create table product_order (
+ order_no int not null ,
+ product_no int not null,
+ order_qty int null,
+ order_product_amount decimal null,
+ foreign key (order_no) references orders(order_no),
+ foreign key (product_no) references product(product_no)
+ );    
