@@ -2,10 +2,9 @@
   "development": {
     "host": "localhost",
     "database": "",
-    "username":"",
-    "password":"",
+    "username": "",
+    "password": "",
     "dialect": "mysql"
-
   },
   "production": {
     "host": "",
