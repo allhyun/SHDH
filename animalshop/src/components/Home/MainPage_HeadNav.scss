@@ -1,0 +1,21 @@
+@import "../../Public.scss"
+
+// .Head {
+//   display: flex;
+
+// }
+
+  nav {
+  width : $width-window
+  padding-top: 1rem
+
+}
+ul {
+  display: flex
+  justify-content: space-een
+  height: 4rem
+  align-items: center
+  font-weight: 600
+   }
+
+
