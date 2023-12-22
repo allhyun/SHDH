@@ -1,21 +1,42 @@
-@import "../../Public.scss"
+@import "../../Public.scss";
 
-// .Head {
-//   display: flex;
+.Head {
+  display: flex;
+  width: $width-window;
+  background-color: $main-color;
+  align-items: center;
+  justify-content: space-between;
 
-// }
-
-  nav {
-  width : $width-window
-  padding-top: 1rem
 
 }
+
+.Head_1{
+  // margin-top: 20px;
+}
+
+.Head_2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  width: $width-window;
+  padding-top: 1rem;
+  background-color: $main-color;
+}
+
 ul {
-  display: flex
-  justify-content: space-een
-  height: 4rem
-  align-items: center
-  font-weight: 600
-   }
+  display: flex;
+  justify-content: space-between;
+  height: 4rem;
+  align-items: center;
+  font-weight: 600;
+}
 
+.main_body{
+  width: $width-window;
+}
 
+.slide_1{
+  display: flex;
+}
