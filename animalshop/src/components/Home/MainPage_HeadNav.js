@@ -1,4 +1,4 @@
-// import "./Mainpage.scss"
+import "./MainPage_HeadNav.scss"
 import { Link } from "react-router-dom";
 
 export default function MainPage_HeadNav() {
@@ -23,10 +23,12 @@ export default function MainPage_HeadNav() {
               <button>검색</button>
             </form>
           </div>
-          <div>
+          <div className="Head_2">
             <p>찜목록</p>
             <p>장바구니</p>
-            <p>마이페이지</p>
+            <div>
+              <Link to="/mypage">마이페이지</Link>
+            </div>
           </div>
         </div>
         <nav>
